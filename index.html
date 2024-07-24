@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@100&display=swap" rel="stylesheet">
+    <title>E-Commerce Product Page</title>
+</head>
+<body>
+    <div class="topnav">
+        <nav>
+            <ul>
+              <div class="mobile"><li><img src="/images/icon-menu.svg" class="menu-icon" id="hamburger" alt=""></li>
+                <li><img src="/images/logo.svg" class="mobile-logo" alt="logo">
+                </li>
+              </div>
+
+
+                <div class="nav-content">
+                  <li><img src="/images/logo.svg" class="logo" alt=""></li>                              
+                  <li>Collections</li>
+                  <li>Men</li>
+                  <li>Women</li>
+                  <li>About</li>
+                  <li>Contact</li>
+                </div>
+
+
+                <div class="right-nav">
+                    <li>
+                      <div class="container"><span id="cart-value" class="cart-value"></span>
+                      </div>
+                      <img src="/images/icon-cart.svg" class="cart" onclick="cart()" alt="">
+                    </li>
+                    <li><img src="/images/image-avatar.png" class="avatar" alt="">
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <div id="mobile-menu" class="mobile-menu slide">
+      <div class="overlay"></div>
+      <div class="sidenav"><img src="/images/icon-close.svg" id="close-menu" alt="">
+      <ul>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul></div>
+    </div>
+
+
+     <div class="cart-container"><div class="cart-content" id="empty-cart">
+     <h3>Cart</h3>
+     <span>Your cart is empty.</span>
+    </div></div>
+
+
+    <div class="cart-container"><div class="product-cart" id="product-cart">
+      <h3>Cart</h3>
+      <div class="product">
+        <div><img src="/images/image-product-1-thumbnail.jpg" class="cart-product-image" alt="">
+        <div class="sub"><div><p class="big">Fall Limited Edition Sneakers </p> <p class="mob">Autumn Limited Edition...</p> </div>
+        <div class="cart-price"><p>$125 x <input type="button" value="" id="number-selected" class="number-selected"></p>
+          <span id="price" class="price"></span></div></div> 
+        <img src="/images/icon-delete.svg" id="delete-btn" class="delete-btn" alt=""></div>
+        <div><button class="checkout-btn">Checkout</button></div></div>
+      </div>
+    </div>
+
+
+
+    <main>
+        <div class="images">
+            <div>
+                <img src="/images/image-product-1.jpg" class="imageproduct">
+             </div> 
+            <div class="thumbnail-row">
+             <div>
+               <img class="thumbnail cursor" src="/images/image-product-1-thumbnail.jpg" onclick="displayslide()" alt="">
+             </div>
+             <div>
+               <img class="thumbnail cursor" src="/images/image-product-2-thumbnail.jpg" onclick="displayslide()" alt="">
+             </div>
+             <div>
+               <img class="thumbnail cursor" src="/images/image-product-3-thumbnail.jpg" onclick="displayslide()" alt="">
+             </div>
+             <div>
+               <img class="thumbnail cursor" src="/images/image-product-4-thumbnail.jpg" onclick="displayslide()" alt="">
+             </div>
+           </div> 
+        </div>
+
+
+
+        <div class="mobile-images">
+          <div class="mobile-slides fade">
+            <img src="/images/image-product-1.jpg" class="mobileimageproduct">
+         </div> 
+         <div class="mobile-slides fade">
+          <img src="/images/image-product-2.jpg" class="mobileimageproduct">
+         </div>  
+        <div class="mobile-slides fade">
+          <img src="/images/image-product-3.jpg" class="mobileimageproduct">
+        </div> 
+        <div class="mobile-slides fade">
+          <img src="/images/image-product-4.jpg" class="mobileimageproduct">
+        </div>
+        <div class="mobile-prev-btn" onclick="plusmobileSlides(-1)"><img src="/images/icon-previous.svg" class="prev" alt=""></div>
+        <div class="mobile-next-btn" onclick="plusmobileSlides(1)"><img src="/images/icon-next.svg" class="next" alt=""></div> 
+        </div>
+        </div>
+
+
+
+        <div class="hero">
+            <div>
+            <span class="hero-span">sneaker company</span>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p class="hero-paragraph">These low-profile sneakers are your perfect casual wear companion. 
+            Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+            <div class="top"><div class="inner"><h2>$125.00 </h2><h5 class="percent">50%</h5></div><h5 class="prev-price">$250.00</h5></div> 
+            <div class="display"><div class="values"><img src="/images/icon-minus.svg" id="minus-btn" class="minus-btn">
+            <input type="button" class="value" id="value" value="0"><img src="/images/icon-plus.svg" id="plus-btn" class="plus-btn"></div>
+            <button class="cart-btn"  id="addtocart"><img src="/images/icon-cart.svg">Add to cart</button></div>
+        </div>
+        </div>
+    </main>
+
+
+    
+    <aside>
+        <div class="overlay"></div>
+        <div class="over-display">
+          <img src="/images/icon-close.svg" class="close-icon" onclick="displayslide()" id="close" alt="">
+            <div class="mySlides">
+                <img src="/images/image-product-1.jpg" class="imageproduct2">
+             </div> 
+             <div class="mySlides">
+              <img src="/images/image-product-2.jpg" class="imageproduct2">
+             </div>  
+            <div class="mySlides">
+              <img src="/images/image-product-3.jpg" class="imageproduct2">
+            </div> 
+            <div class="mySlides">
+              <img src="/images/image-product-4.jpg" class="imageproduct2">
+            </div>
+            <div class="prev-btn" onclick="plusSlides(-1)"><img src="/images/icon-previous.svg" class="prev" alt=""></div>
+            <div class="next-btn" onclick="plusSlides(1)"><img src="/images/icon-next.svg" class="next" alt=""></div>
+            <div class="row">
+             <div class="column">
+               <img class="demo cursor" src="/images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="">
+             </div>
+             <div class="column">
+               <img class="demo cursor" src="/images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="">
+             </div>
+             <div class="column">
+               <img class="demo cursor" src="/images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="">
+             </div>
+             <div class="column">
+               <img class="demo cursor" src="/images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="">
+             </div>
+           </div> 
+        </div>
+    </aside>
+    <script src="/script.js"></script>
+</body>
+</html>
